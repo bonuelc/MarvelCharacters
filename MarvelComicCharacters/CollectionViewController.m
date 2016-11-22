@@ -21,6 +21,37 @@ static NSString * const reuseIdentifier = @"characterCell";
     [super viewDidLoad];
 }
 
+- (void)refreshCharacters {
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    // compute url parameters
+    NSTimeInterval seconds = [NSDate timeIntervalSinceReferenceDate];
+    double milliseconds = seconds*1000;
+    NSString *timestamp = [[NSString alloc] initWithFormat:@"%.0f", milliseconds];
+    NSString *privateKey = @"73388c4da7de1c82c718936ec003923a77d3d3bf";
+    NSString *apiKey = @"623e50c12a8b0e6bbb058462369842d0";
+    NSString *timestampAndAPIKey = [[NSString alloc] initWithFormat:@"%@%@%@", timestamp, privateKey, apiKey];
+    NSString *hash = [self generateMD5:timestampAndAPIKey];
+    
+    NSString *urlString = [[NSString alloc]initWithFormat:@"https://gateway.marvel.com:443/v1/public/characters?ts=%@&apikey=%@&hash=%@", timestamp, apiKey, hash];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *requst = [[NSURLRequest alloc]initWithURL:url];
+    
+    NSURLSessionDownloadTask *charactersTask = [session downloadTaskWithRequest:requst completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSData *charctersData = [[NSData alloc]initWithContentsOfURL:location];
+        NSDictionary *charactersResponseDict = [NSJSONSerialization JSONObjectWithData:charctersData options:kNilOptions error:nil];
+        self.characterThumbnailURLPathsArray = [charactersResponseDict valueForKeyPath:@"data.results.thumbnail"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+    }];
+    
+    [charactersTask resume];
+}
+
 - (NSString *) generateMD5:(NSString *) input
 {
     const char *cStr = [input UTF8String];
