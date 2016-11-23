@@ -14,6 +14,7 @@
 		8584E1C61DE3A3E100421414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8584E1C41DE3A3E100421414 /* LaunchScreen.storyboard */; };
 		8584E1CF1DE3A48500421414 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584E1CE1DE3A48500421414 /* CollectionViewController.m */; };
 		85D2C8BC1DE6132A0057BDF2 /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */; };
+		85D2C8BF1DE637CE0057BDF2 /* CharacterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C8BE1DE637CE0057BDF2 /* CharacterCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		8584E1CE1DE3A48500421414 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		85D2C8BA1DE6132A0057BDF2 /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoController.h; sourceTree = "<group>"; };
 		85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoController.m; sourceTree = "<group>"; };
+		85D2C8BD1DE637CE0057BDF2 /* CharacterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCollectionViewCell.h; sourceTree = "<group>"; };
+		85D2C8BE1DE637CE0057BDF2 /* CharacterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				8584E1BA1DE3A3E100421414 /* AppDelegate.m */,
 				8584E1CD1DE3A48500421414 /* CollectionViewController.h */,
 				8584E1CE1DE3A48500421414 /* CollectionViewController.m */,
+				85D2C8BD1DE637CE0057BDF2 /* CharacterCollectionViewCell.h */,
+				85D2C8BE1DE637CE0057BDF2 /* CharacterCollectionViewCell.m */,
 				85D2C8BA1DE6132A0057BDF2 /* PhotoController.h */,
 				85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */,
 				8584E1BF1DE3A3E100421414 /* Main.storyboard */,
@@ -157,6 +162,7 @@
 				8584E1BB1DE3A3E100421414 /* AppDelegate.m in Sources */,
 				8584E1B81DE3A3E100421414 /* main.m in Sources */,
 				85D2C8BC1DE6132A0057BDF2 /* PhotoController.m in Sources */,
+				85D2C8BF1DE637CE0057BDF2 /* CharacterCollectionViewCell.m in Sources */,
 				8584E1CF1DE3A48500421414 /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
