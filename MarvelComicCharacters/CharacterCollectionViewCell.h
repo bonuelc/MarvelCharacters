@@ -11,5 +11,6 @@
 @interface CharacterCollectionViewCell : UICollectionViewCell
 
 @property (nonnull) IBOutlet UIImageView *photoView;
+@property (nonnull, nonatomic) NSDictionary *photoData;
 
 @end
