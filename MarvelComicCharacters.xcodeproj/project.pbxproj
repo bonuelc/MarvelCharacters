@@ -13,6 +13,7 @@
 		8584E1C31DE3A3E100421414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8584E1C21DE3A3E100421414 /* Assets.xcassets */; };
 		8584E1C61DE3A3E100421414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8584E1C41DE3A3E100421414 /* LaunchScreen.storyboard */; };
 		8584E1CF1DE3A48500421414 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584E1CE1DE3A48500421414 /* CollectionViewController.m */; };
+		85D2C8BC1DE6132A0057BDF2 /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8584E1C71DE3A3E100421414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8584E1CD1DE3A48500421414 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		8584E1CE1DE3A48500421414 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		85D2C8BA1DE6132A0057BDF2 /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoController.h; sourceTree = "<group>"; };
+		85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				8584E1BA1DE3A3E100421414 /* AppDelegate.m */,
 				8584E1CD1DE3A48500421414 /* CollectionViewController.h */,
 				8584E1CE1DE3A48500421414 /* CollectionViewController.m */,
+				85D2C8BA1DE6132A0057BDF2 /* PhotoController.h */,
+				85D2C8BB1DE6132A0057BDF2 /* PhotoController.m */,
 				8584E1BF1DE3A3E100421414 /* Main.storyboard */,
 				8584E1C21DE3A3E100421414 /* Assets.xcassets */,
 				8584E1C41DE3A3E100421414 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				8584E1BB1DE3A3E100421414 /* AppDelegate.m in Sources */,
 				8584E1B81DE3A3E100421414 /* main.m in Sources */,
+				85D2C8BC1DE6132A0057BDF2 /* PhotoController.m in Sources */,
 				8584E1CF1DE3A48500421414 /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +306,7 @@
 				8584E1CC1DE3A3E100421414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
