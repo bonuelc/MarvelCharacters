@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import "CharacterCollectionViewCell.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @interface CollectionViewController ()
@@ -71,20 +72,20 @@ static NSString * const reuseIdentifier = @"characterCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.charactersArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    CharacterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    cell.photoData = [self.charactersArray[indexPath.row] valueForKey:@"thumbnail"];
     
     return cell;
 }
