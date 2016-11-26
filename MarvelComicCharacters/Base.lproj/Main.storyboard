@@ -49,6 +49,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Y7n-g4-5Ba"/>
+                    <connections>
+                        <segue destination="oG1-Rq-GOU" kind="show" identifier="nextSegue" id="exR-P4-gF9"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R94-EY-YJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
