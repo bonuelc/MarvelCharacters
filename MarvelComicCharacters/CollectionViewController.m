@@ -17,6 +17,7 @@
 @implementation CollectionViewController
 
 static NSString * const reuseIdentifier = @"characterCell";
+static NSInteger const apiResultsLimit = 15;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +38,7 @@ static NSString * const reuseIdentifier = @"characterCell";
     NSString *timestampAndAPIKey = [[NSString alloc] initWithFormat:@"%@%@%@", timestamp, privateKey, apiKey];
     NSString *hash = [self generateMD5:timestampAndAPIKey];
     
-    NSString *urlString = [[NSString alloc]initWithFormat:@"https://gateway.marvel.com:443/v1/public/characters?ts=%@&apikey=%@&hash=%@", timestamp, apiKey, hash];
+    NSString *urlString = [[NSString alloc]initWithFormat:@"https://gateway.marvel.com:443/v1/public/characters?limit=%ld&ts=%@&apikey=%@&hash=%@", (long)apiResultsLimit, timestamp, apiKey, hash];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *requst = [[NSURLRequest alloc]initWithURL:url];
     
