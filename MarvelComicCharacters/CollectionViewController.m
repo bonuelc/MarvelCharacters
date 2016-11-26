@@ -25,6 +25,15 @@ static NSInteger const apiResultsLimit = 15;
     [self refreshCharacters];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"nextSegue"]) {
+        UINavigationController * navController = [segue destinationViewController];
+        CollectionViewController * collectionVC = [navController topViewController];
+        collectionVC.apiPageNumber = self.apiPageNumber + 1;
+    }
+}
+
 - (void)refreshCharacters {
     
     NSURLSession *session = [NSURLSession sharedSession];
