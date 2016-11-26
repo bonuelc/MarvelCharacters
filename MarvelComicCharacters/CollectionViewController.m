@@ -19,6 +19,8 @@ static NSString * const reuseIdentifier = @"characterCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self refreshCharacters];
 }
 
 - (void)refreshCharacters {
@@ -42,7 +44,7 @@ static NSString * const reuseIdentifier = @"characterCell";
         
         NSData *charctersData = [[NSData alloc]initWithContentsOfURL:location];
         NSDictionary *charactersResponseDict = [NSJSONSerialization JSONObjectWithData:charctersData options:kNilOptions error:nil];
-        self.characterThumbnailURLPathsArray = [charactersResponseDict valueForKeyPath:@"data.results.thumbnail"];
+        self.charactersArray = [charactersResponseDict valueForKeyPath:@"data.results"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
