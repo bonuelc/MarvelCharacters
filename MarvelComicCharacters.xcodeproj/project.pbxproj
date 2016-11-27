@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851BF1F51DEA71CD000E5B53 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851BF1F41DEA71CD000E5B53 /* DetailViewController.m */; };
 		8584E1B81DE3A3E100421414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584E1B71DE3A3E100421414 /* main.m */; };
 		8584E1BB1DE3A3E100421414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584E1BA1DE3A3E100421414 /* AppDelegate.m */; };
 		8584E1C11DE3A3E100421414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8584E1BF1DE3A3E100421414 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851BF1F31DEA71CD000E5B53 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		851BF1F41DEA71CD000E5B53 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8584E1B31DE3A3E000421414 /* MarvelComicCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelComicCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8584E1B71DE3A3E100421414 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8584E1B91DE3A3E100421414 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				8584E1BA1DE3A3E100421414 /* AppDelegate.m */,
 				8584E1CD1DE3A48500421414 /* CollectionViewController.h */,
 				8584E1CE1DE3A48500421414 /* CollectionViewController.m */,
+				851BF1F31DEA71CD000E5B53 /* DetailViewController.h */,
+				851BF1F41DEA71CD000E5B53 /* DetailViewController.m */,
 				85D2C8BD1DE637CE0057BDF2 /* CharacterCollectionViewCell.h */,
 				85D2C8BE1DE637CE0057BDF2 /* CharacterCollectionViewCell.m */,
 				85D2C8BA1DE6132A0057BDF2 /* PhotoController.h */,
@@ -164,6 +169,7 @@
 				85D2C8BC1DE6132A0057BDF2 /* PhotoController.m in Sources */,
 				85D2C8BF1DE637CE0057BDF2 /* CharacterCollectionViewCell.m in Sources */,
 				8584E1CF1DE3A48500421414 /* CollectionViewController.m in Sources */,
+				851BF1F51DEA71CD000E5B53 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
