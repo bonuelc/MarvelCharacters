@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import "DetailViewController.h"
 #import "CharacterCollectionViewCell.h"
 #import <CommonCrypto/CommonDigest.h>
 
@@ -31,6 +32,10 @@ static NSInteger const apiResultsLimit = 15;
         UINavigationController * navController = [segue destinationViewController];
         CollectionViewController * collectionVC = [navController topViewController];
         collectionVC.apiPageNumber = self.apiPageNumber + 1;
+    } else if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        DetailViewController * detailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
+        detailVC.characterData = self.charactersArray[indexPath.row];
     }
 }
 
