@@ -38,7 +38,7 @@ static NSInteger const apiResultsLimit = 15;
     NSString *timestampAndAPIKey = [[NSString alloc] initWithFormat:@"%@%@%@", timestamp, privateKey, apiKey];
     NSString *hash = [self generateMD5:timestampAndAPIKey];
     
-    NSString *urlString = [[NSString alloc]initWithFormat:@"https://gateway.marvel.com:443/v1/public/characters?limit=%ld&ts=%@&apikey=%@&hash=%@", (long)apiResultsLimit, timestamp, apiKey, hash];
+    NSString *urlString = [[NSString alloc]initWithFormat:@"https://gateway.marvel.com:443/v1/public/characters?offset=%ld&limit=%ld&ts=%@&apikey=%@&hash=%@", (long)[self offset], (long)apiResultsLimit, timestamp, apiKey, hash];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *requst = [[NSURLRequest alloc]initWithURL:url];
     
@@ -54,6 +54,10 @@ static NSInteger const apiResultsLimit = 15;
     }];
     
     [charactersTask resume];
+}
+
+- (NSInteger)offset {
+    return _apiPageNumber * apiResultsLimit;
 }
 
 - (NSString *) generateMD5:(NSString *) input

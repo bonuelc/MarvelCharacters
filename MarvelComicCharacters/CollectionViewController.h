@@ -11,5 +11,6 @@
 @interface CollectionViewController : UICollectionViewController
 
 @property (nonatomic) NSArray *charactersArray;
+@property (nonatomic) NSInteger apiPageNumber;
 
 @end
