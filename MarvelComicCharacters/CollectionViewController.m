@@ -23,6 +23,8 @@ static NSInteger const apiResultsLimit = 15;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Marvel Characters";
+    
     [self setupGestures];
     
     [self refreshCharacters];
