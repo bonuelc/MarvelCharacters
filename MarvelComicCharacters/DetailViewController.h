@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SafariServices/SafariServices.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <SFSafariViewControllerDelegate>
 
 @property (nonatomic) NSDictionary *characterData;
 
