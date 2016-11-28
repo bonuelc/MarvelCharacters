@@ -23,7 +23,31 @@ static NSInteger const apiResultsLimit = 15;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupGestures];
+    
     [self refreshCharacters];
+}
+
+- (void)setupGestures {
+    UIScreenEdgePanGestureRecognizer *swipeRight = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
+    [swipeRight setEdges:UIRectEdgeLeft];
+    [self.view addGestureRecognizer:swipeRight];
+    
+    UIScreenEdgePanGestureRecognizer *swipeLeft = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
+    [swipeLeft setEdges:UIRectEdgeRight];
+    [self.view addGestureRecognizer:swipeLeft];
+}
+
+- (void)handleRightSwipe:(UIGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded && self.apiPageNumber != 0) {
+        [self dismissViewControllerAnimated:true completion:nil];
+    }
+}
+
+- (void)handleLeftSwipe:(UIGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        [self performSegueWithIdentifier:@"nextSegue" sender:nil];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
