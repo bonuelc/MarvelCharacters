@@ -73,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WcR-B0-sav">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WcR-B0-sav">
                                 <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WcR-B0-sav" secondAttribute="height" multiplier="1:1" id="kN8-17-fbG"/>

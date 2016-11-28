@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SafariServices/SafariServices.h>
 
-@interface DetailViewController : UIViewController <SFSafariViewControllerDelegate>
+@interface DetailViewController : UIViewController <SFSafariViewControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic) NSDictionary *characterData;
 

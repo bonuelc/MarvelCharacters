@@ -21,6 +21,26 @@
     }];
     self.nameLabel.text = [self.characterData valueForKey:@"name"];
     self.descriptionLabel.text = [self.characterData valueForKey:@"description"];
+    
+    [self setupGestures];
+}
+
+- (void)setupGestures {
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
+    longPressGestureRecognizer.minimumPressDuration = 0.5;
+    [longPressGestureRecognizer setDelegate:self];
+    [self.imageView addGestureRecognizer:longPressGestureRecognizer];
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateBegan){
+        NSArray *urls = [self.characterData valueForKey:@"urls"];
+        NSString *urlString = [urls[0] valueForKey:@"url"];
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:url];
+        svc.delegate = self;
+        [self presentViewController:svc animated:true completion:nil];
+    }
 }
 
 @end
