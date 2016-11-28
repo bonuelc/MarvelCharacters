@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CollectionViewController : UICollectionViewController
+@interface CollectionViewController : UICollectionViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic) NSArray *charactersArray;
 @property (nonatomic) NSInteger apiPageNumber;

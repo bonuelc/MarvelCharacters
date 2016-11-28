@@ -31,10 +31,12 @@ static NSInteger const apiResultsLimit = 15;
 - (void)setupGestures {
     UIScreenEdgePanGestureRecognizer *swipeRight = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
     [swipeRight setEdges:UIRectEdgeLeft];
+    [swipeRight setDelegate:self];
     [self.view addGestureRecognizer:swipeRight];
     
     UIScreenEdgePanGestureRecognizer *swipeLeft = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
     [swipeLeft setEdges:UIRectEdgeRight];
+    [swipeLeft setDelegate:self];
     [self.view addGestureRecognizer:swipeLeft];
 }
 
