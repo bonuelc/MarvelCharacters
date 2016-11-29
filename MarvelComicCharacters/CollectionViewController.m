@@ -86,13 +86,22 @@ static NSInteger const apiResultsLimit = 15;
     
     NSURLSessionDownloadTask *charactersTask = [session downloadTaskWithRequest:requst completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSData *charctersData = [[NSData alloc]initWithContentsOfURL:location];
-        NSDictionary *charactersResponseDict = [NSJSONSerialization JSONObjectWithData:charctersData options:kNilOptions error:nil];
-        self.charactersArray = [charactersResponseDict valueForKeyPath:@"data.results"];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
+        if (location == nil || response == nil || error) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Network issue" message:[NSString stringWithFormat:@"%@", error] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self dismissViewControllerAnimated:true completion:nil];
+            }];
+            [alertController addAction:action];
+            [self presentViewController:alertController animated:true completion:nil];
+        } else {
+            NSData *charctersData = [[NSData alloc]initWithContentsOfURL:location];
+            NSDictionary *charactersResponseDict = [NSJSONSerialization JSONObjectWithData:charctersData options:kNilOptions error:nil];
+            self.charactersArray = [charactersResponseDict valueForKeyPath:@"data.results"];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+        }
     }];
     
     [charactersTask resume];
