@@ -99,30 +99,39 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OQ-A0-gaW">
-                                <rect key="frame" x="16" y="411" width="343" height="59"/>
+                                <rect key="frame" x="16" y="411" width="343" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-m3-vYF">
-                                <rect key="frame" x="16" y="470" width="343" height="177"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-m3-vYF">
+                                <rect key="frame" x="16" y="471" width="343" height="181"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by Marvel. © 2014 Marvel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8q-8z-cKf">
+                                <rect key="frame" x="16" y="652" width="343" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="l8q-8z-cKf" secondAttribute="trailing" id="EEX-8n-MEi"/>
                             <constraint firstItem="8OQ-A0-gaW" firstAttribute="leading" secondItem="ZoN-O9-eVP" secondAttribute="leadingMargin" id="EjB-28-KpP"/>
                             <constraint firstItem="0cD-m3-vYF" firstAttribute="trailing" secondItem="8OQ-A0-gaW" secondAttribute="trailing" id="GCI-DM-qrz"/>
                             <constraint firstItem="WcR-B0-sav" firstAttribute="top" secondItem="x0M-dH-Ivc" secondAttribute="bottom" constant="8" id="Ip6-aH-eV3"/>
                             <constraint firstItem="0cD-m3-vYF" firstAttribute="leading" secondItem="8OQ-A0-gaW" secondAttribute="leading" id="NVG-Kx-cak"/>
+                            <constraint firstItem="l8q-8z-cKf" firstAttribute="top" secondItem="0cD-m3-vYF" secondAttribute="bottom" id="VLD-dp-fwr"/>
                             <constraint firstItem="0cD-m3-vYF" firstAttribute="top" secondItem="8OQ-A0-gaW" secondAttribute="bottom" id="WBc-Fd-uHJ"/>
+                            <constraint firstItem="l8q-8z-cKf" firstAttribute="leading" secondItem="ZoN-O9-eVP" secondAttribute="leadingMargin" id="WzK-hQ-qaB"/>
                             <constraint firstAttribute="trailing" secondItem="WcR-B0-sav" secondAttribute="trailing" id="Z0Q-3E-JAf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8OQ-A0-gaW" secondAttribute="trailing" id="al9-0b-l4T"/>
                             <constraint firstItem="8OQ-A0-gaW" firstAttribute="top" secondItem="WcR-B0-sav" secondAttribute="bottom" constant="8" id="c7n-7s-wde"/>
                             <constraint firstItem="0cD-m3-vYF" firstAttribute="height" secondItem="8OQ-A0-gaW" secondAttribute="height" multiplier="3" id="eHU-N5-bIi"/>
-                            <constraint firstItem="eo9-or-gcM" firstAttribute="top" secondItem="0cD-m3-vYF" secondAttribute="bottom" constant="20" id="u8K-Li-hD5"/>
+                            <constraint firstItem="eo9-or-gcM" firstAttribute="top" secondItem="l8q-8z-cKf" secondAttribute="bottom" id="pCs-c4-iuT"/>
                             <constraint firstItem="WcR-B0-sav" firstAttribute="leading" secondItem="ZoN-O9-eVP" secondAttribute="leading" id="xNB-UW-hV2"/>
                         </constraints>
                     </view>
@@ -135,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6as-d4-F3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="523"/>
+            <point key="canvasLocation" x="2235.5" y="522.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gzo-Ah-Rte">
