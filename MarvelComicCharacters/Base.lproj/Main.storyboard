@@ -18,7 +18,7 @@
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IuE-2u-JNI">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -47,6 +47,25 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="hw3-Yu-4ca" customClass="FooterAttributionCollectionReusableView">
+                            <rect key="frame" x="0.0" y="164" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by Marvel. © 2014 Marvel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa2-NE-n0q">
+                                    <rect key="frame" x="8" y="8" width="584" height="34"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="qa2-NE-n0q" secondAttribute="trailing" id="6Tb-Um-thu"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="qa2-NE-n0q" secondAttribute="bottom" id="elO-h2-hMk"/>
+                                <constraint firstItem="qa2-NE-n0q" firstAttribute="leading" secondItem="hw3-Yu-4ca" secondAttribute="leadingMargin" id="uha-aN-01m"/>
+                                <constraint firstItem="qa2-NE-n0q" firstAttribute="top" secondItem="hw3-Yu-4ca" secondAttribute="topMargin" id="ykK-iz-D63"/>
+                            </constraints>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="RTI-KO-XuT" id="y7J-x1-3CU"/>
                             <outlet property="delegate" destination="RTI-KO-XuT" id="zSo-he-1bM"/>

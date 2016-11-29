@@ -9,6 +9,7 @@
 #import "CollectionViewController.h"
 #import "DetailViewController.h"
 #import "CharacterCollectionViewCell.h"
+#import "FooterAttributionCollectionReusableView.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @interface CollectionViewController ()
@@ -144,6 +145,18 @@ static NSInteger const apiResultsLimit = 15;
     cell.photoData = [self.charactersArray[indexPath.row] valueForKey:@"thumbnail"];
     
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        return nil;
+    }
+    
+    FooterAttributionCollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerView" forIndexPath:indexPath];
+    
+    return footerView;
 }
 
 #pragma mark <UICollectionViewDelegate>
